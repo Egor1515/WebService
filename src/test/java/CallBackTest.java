@@ -4,8 +4,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -22,6 +20,8 @@ public class CallBackTest {
     @BeforeEach
     void setupTest() {
         driver = new ChromeDriver();
+        driver.get("http://localhost:9999/");
+
     }
 
     @AfterEach
@@ -34,7 +34,7 @@ public class CallBackTest {
     @Test
 
     public void shouldSendForm() {
-        driver.get("http://localhost:9999/");
+
         List<WebElement> textFields = driver.findElements(By.className("input__control"));
         textFields.get(0).sendKeys("Иван");
         textFields.get(1).sendKeys("+79146865959");
@@ -49,7 +49,7 @@ public class CallBackTest {
     @Test
 
     public void shouldSendForm1() {
-        driver.get("http://localhost:9999/");
+
         List<WebElement> textFields = driver.findElements(By.className("input__control"));
         textFields.get(0).sendKeys("И-И");
         textFields.get(1).sendKeys("+79146865959");
@@ -63,7 +63,7 @@ public class CallBackTest {
     @Test
 
     public void shouldSendForm2() {
-        driver.get("http://localhost:9999/");
+
         List<WebElement> textFields = driver.findElements(By.className("input__control"));
         textFields.get(0).sendKeys("И");
         textFields.get(1).sendKeys("+79146865959");
@@ -77,7 +77,7 @@ public class CallBackTest {
     @Test
 
     public void shouldSendForm3() {
-        driver.get("http://localhost:9999/");
+
         List<WebElement> textFields = driver.findElements(By.className("input__control"));
         textFields.get(0).sendKeys("еееееееееееееееееееееееееееееееееееееееееееееееееееееееееееееееееееее");
         textFields.get(1).sendKeys("+79146865959");
@@ -91,7 +91,7 @@ public class CallBackTest {
     @Test
 
     public void shouldSendForm4() {
-        driver.get("http://localhost:9999/");
+
         List<WebElement> textFields = driver.findElements(By.className("input__control"));
         textFields.get(0).sendKeys("Иван");
         textFields.get(1).sendKeys("+77777777777");
@@ -105,7 +105,7 @@ public class CallBackTest {
     @Test
 
     public void shouldSendForm5() {
-        driver.get("http://localhost:9999/");
+
         List<WebElement> textFields = driver.findElements(By.className("input__control"));
         textFields.get(0).sendKeys("Иван");
         textFields.get(1).sendKeys("+79146865959");
