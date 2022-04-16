@@ -36,6 +36,7 @@ public class CallBackTest {
 
     public void shouldSendForm() {
 
+
         driver.findElement(By.cssSelector(".input__control[type='text']")).sendKeys("Иванов Константин");
         driver.findElement(By.cssSelector(".input__control[type='tel']")).sendKeys("+79146865959");
         driver.findElement(By.className("checkbox__box")).click();
