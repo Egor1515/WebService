@@ -9,7 +9,7 @@ build: off
 
 install:
 
-  - java -jar ./artifacts/app-order.jar -port=5555
+  - java -jar ./artifacts/app-order.jar -port=5555 &
   -
 build_script:
   - chmod +x gradlew
