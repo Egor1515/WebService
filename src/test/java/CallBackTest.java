@@ -20,7 +20,6 @@ public class CallBackTest {
 
     @BeforeEach
     void setupTest() {
-        driver = new ChromeDriver();
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless");
         driver = new ChromeDriver(options);
